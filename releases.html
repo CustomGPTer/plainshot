@@ -1,38 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plainshot releases</title>
-<meta name="description" content="Every version of Plainshot and what changed.">
+<title>Plainshot release notes</title>
+<meta name="description" content="What changed in each version of Plainshot, with the file size and checksum to check your download.">
 <meta name="author" content="Jonathan Jackson">
 <link rel="canonical" href="https://customgpter.github.io/plainshot/releases.html">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Plainshot releases">
-<meta property="og:description" content="Every version of Plainshot and what changed.">
-<meta name="theme-color" content="#0e0f12">
-<link rel="stylesheet" href="assets/site.css">
+<meta name="theme-color" content="#f2f7f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Plainshot">
+<meta property="og:title" content="Plainshot release notes">
+<meta property="og:description" content="What changed in each version of Plainshot, with the file size and checksum to check your download.">
+<meta property="og:url" content="https://customgpter.github.io/plainshot/releases.html">
+<meta property="og:image" content="https://customgpter.github.io/plainshot/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Plainshot&#x27;s gallery, with a Safe pill on the cleaned photos">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
 </head>
 <body>
-<header><a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="28" height="28">Plainshot</a><nav><a href="index.html">Home</a><a href="releases.html" class="on">Releases</a><a href="more-apps.html">More apps</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="licences.html">Licences</a></nav></header>
-<main>
-
-<h1>Releases</h1>
-<p><a class="button" href="https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk">Download the latest version</a></p>
-<h2>1.0 <span class="small">18 November 2026</span></h2>
-<p>First public release.</p>
-<ul>
-<li>Tap Shoot and the phone's own camera opens. Each photo is cleaned a few seconds after you take it and moved to the Plainshot album.</li>
-<li>Location, date and time, phone model, camera settings, thumbnail, Samsung's extras and the motion clip are taken out, each with a switch to keep it.</li>
-<li>A gallery of every photo on the phone, with a Safe pill on the ones that are.</li>
-<li>Make safe for photos already on the phone, and Share safe in the share menu.</li>
-<li>Always on, a quick-settings tile, a home-screen shortcut and a 30-day bin.</li>
-<li>JPEG, HEIC, PNG and WebP photos; MP4 and MOV videos.</li>
-<li>No internet permission.</li>
-</ul>
-<p class="small">Plainshot cannot check for updates itself, because it has no internet access. Every version is on the <a href="https://github.com/CustomGPTer/plainshot/releases">GitHub releases page</a>.</p>
-
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="Plainshot home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#15171c"/><path d="M32 9l19 7v15c0 12-8 20.5-19 24-11-3.5-19-12-19-24V16z" fill="#5edfb0"/><circle cx="32" cy="31" r="9.5" fill="#15171c"/><circle cx="32" cy="31" r="5.5" fill="#5edfb0"/><circle cx="34.2" cy="28.8" r="1.6" fill="#15171c"/></svg><span>Plainshot</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html" aria-current="page">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main" class="doc">
+<div class="wrap">
+<div class="measure">
+<h1>Release notes</h1>
+<p class="lede">What changed in each version of Plainshot. The newest is at the top.</p>
+<section class="release" id="v1.0"><h2><span class="ver">Version 1.0</span> <span class="when">18 November 2026</span><span class="tag">Latest</span></h2><ul><li><b>First public release.</b> Tap Shoot and the phone's own camera opens. Each photo is cleaned a few seconds after you take it and moved to the Plainshot album.</li><li>Location, date and time, phone model, camera settings, thumbnail, Samsung's extras and the motion clip are taken out, each with a switch to keep it.</li><li>A gallery of every photo on the phone, with a Safe pill on the ones that are.</li><li>Make safe for photos already on the phone, and Share safe in the share menu.</li><li>Always on, a quick-settings tile, a home-screen shortcut and a 30-day bin.</li><li>JPEG, HEIC, PNG and WebP photos; MP4 and MOV videos.</li><li>No internet permission.</li></ul></section>
+<h2 id="checking">Checking your download</h2>
+<p>The file for version 1.0 is called <code>Plainshot.apk</code>. It is 2.7 MB (2,708,042 bytes). Its SHA-256 checksum is:</p>
+<p><code class="sum">34209aced56e389715cb63e31305a885f24ca85ae43bdef9ee2b650d200502db</code></p>
+<p>On Windows, run <code>certutil -hashfile Plainshot.apk SHA256</code> and compare. Every version is signed with the same key, so each one installs over the last and keeps what you have saved.</p>
+<p>Older versions are on the <a href="https://github.com/CustomGPTer/plainshot/releases">GitHub releases page</a>.</p>
+</div>
+</div>
 </main>
-<footer><p>Plainshot is free. No adverts, no accounts, no paid version.</p><p>Made by Jonathan Jackson · <a href="https://github.com/CustomGPTer/plainshot/issues">Report a problem</a></p></footer>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="Plainshot home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#15171c"/><path d="M32 9l19 7v15c0 12-8 20.5-19 24-11-3.5-19-12-19-24V16z" fill="#5edfb0"/><circle cx="32" cy="31" r="9.5" fill="#15171c"/><circle cx="32" cy="31" r="5.5" fill="#5edfb0"/><circle cx="34.2" cy="28.8" r="1.6" fill="#15171c"/></svg><span>Plainshot</span></a>
+<p>&copy; 2026 Jonathan Jackson. Plainshot is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/plainshot/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
 </body>
 </html>

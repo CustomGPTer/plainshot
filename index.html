@@ -1,62 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plainshot: photos with nothing attached</title>
-<meta name="description" content="Plainshot takes the hidden information out of your photos as you take them: where, when and which phone. Free, with no adverts, no accounts, no tracking and no internet access.">
+<title>Plainshot: take the photo, leave the hidden details behind</title>
+<meta name="description" content="Plainshot is a free Android app that takes the location, date and phone details out of every photo a few seconds after you take it. It has no internet access at all. No adverts, no account.">
 <meta name="author" content="Jonathan Jackson">
 <link rel="canonical" href="https://customgpter.github.io/plainshot/">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Plainshot: photos with nothing attached">
-<meta property="og:description" content="Plainshot takes the hidden information out of your photos as you take them: where, when and which phone. Free, with no adverts, no accounts, no tracking and no internet access.">
-<meta property="og:image" content="https://customgpter.github.io/plainshot/assets/screens.png">
-<meta name="theme-color" content="#0e0f12">
-<link rel="stylesheet" href="assets/site.css">
+<meta name="theme-color" content="#f2f7f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Plainshot">
+<meta property="og:title" content="Plainshot: take the photo, leave the hidden details behind">
+<meta property="og:description" content="Plainshot is a free Android app that takes the location, date and phone details out of every photo a few seconds after you take it. It has no internet access at all. No adverts, no account.">
+<meta property="og:url" content="https://customgpter.github.io/plainshot/">
+<meta property="og:image" content="https://customgpter.github.io/plainshot/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Plainshot&#x27;s gallery, with a Safe pill on the cleaned photos">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Plainshot","url":"https://customgpter.github.io/plainshot/","description":"Plainshot is a free Android app that takes the location, date and phone details out of every photo a few seconds after you take it. It has no internet access at all. No adverts, no account.","applicationCategory":"PhotographyApplication","operatingSystem":"Android 13 or later","softwareVersion":"1.0","downloadUrl":"https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk","releaseNotes":"https://customgpter.github.io/plainshot/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/plainshot/assets/og.png","featureList":["Cleans as you shoot","Everything off unless you say","The picture is never re-made","Always on","A gallery with a Safe pill","What is in this file","Names that say nothing","Make safe","Share safe","Photos and videos"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Plainshot really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts. See the comparison."}},{"@type":"Question","name":"Does it change how my photos look?","acceptedAnswer":{"@type":"Answer","text":"No. It uses the phone's own camera, and the picture is copied across byte for byte. Only the hidden information is taken out."}},{"@type":"Question","name":"What does it take out?","acceptedAnswer":{"@type":"Answer","text":"Location, date and time, phone model, camera settings, the small preview, Samsung's extras and the motion clip. Each can be kept with its own switch."}},{"@type":"Question","name":"Does it hide what is in the picture?","acceptedAnswer":{"@type":"Answer","text":"No. A street sign, a face or a reflection in the picture is still in the picture."}},{"@type":"Question","name":"Can a cloud backup get the original first?","acceptedAnswer":{"@type":"Answer","text":"It can. The camera saves each shot with its information and Plainshot cleans it about three seconds later. A backup that uploads the instant a photo is saved could take the original."}},{"@type":"Question","name":"What about RAW files?","acceptedAnswer":{"@type":"Answer","text":"They are left where the camera put them and never get the Safe pill. HEIC photos keep their rotation and colour, because in a HEIC file those are part of the picture."}},{"@type":"Question","name":"Why does it ask for all files access and usage access?","acceptedAnswer":{"@type":"Answer","text":"All files access lets it clean photos in the Camera folder. Usage access lets it see when the camera closes. Android locks usage access for downloaded apps; the app shows how to allow it."}},{"@type":"Question","name":"How do I update Plainshot?","acceptedAnswer":{"@type":"Answer","text":"Plainshot has no internet access, so it cannot tell you about new versions. Look at the release notes now and then, and install a new version over the old one."}}]}</script>
 </head>
 <body>
-<header><a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="28" height="28">Plainshot</a><nav><a href="index.html" class="on">Home</a><a href="releases.html">Releases</a><a href="more-apps.html">More apps</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="licences.html">Licences</a></nav></header>
-<main>
-
-<section class="hero">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="Plainshot home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#15171c"/><path d="M32 9l19 7v15c0 12-8 20.5-19 24-11-3.5-19-12-19-24V16z" fill="#5edfb0"/><circle cx="32" cy="31" r="9.5" fill="#15171c"/><circle cx="32" cy="31" r="5.5" fill="#5edfb0"/><circle cx="34.2" cy="28.8" r="1.6" fill="#15171c"/></svg><span>Plainshot</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
 <h1>Take the photo. Leave everything else behind.</h1>
-<p class="lead">Every photo your phone takes carries hidden information: where you were, the date and time, which phone you have. Plainshot takes it out a few seconds after you press the shutter. Tap Shoot, use the phone's own camera with every mode it has, and what lands in your album is the picture and nothing else.</p>
-<p><a class="button" href="https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk">Download Plainshot</a> <span class="small">Android 13 or newer · about 3 MB · <a href="releases.html">what is new</a></span></p>
-<img class="shots" src="assets/screens.png" alt="Six Plainshot screens: the gallery with Safe pills, what an uncleaned photo holds, the same sheet for a cleaned photo, selecting photos to make safe, the switches for what may stay, and the shooting settings" width="1404" height="1736">
-</section>
-<section><h2>What it does</h2>
-<div class="grid">
-<div><h3>Cleans as you shoot</h3><p>Each photo is cleaned about three seconds after you take it and moved to its own Plainshot album. The original is deleted, so there is one copy and it is the clean one.</p></div>
-<div><h3>Your camera, untouched</h3><p>Plainshot has no camera of its own. It opens the phone's full camera, so nothing about how your photos look changes.</p></div>
-<div><h3>The picture is never re-made</h3><p>The information is taken out and the picture is copied across byte for byte. No quality is lost.</p></div>
-<div><h3>Everything off unless you say</h3><p>Location, date and time, phone model, camera settings, thumbnail, Samsung's extras and the motion clip all go. Each has its own switch if you want it kept.</p></div>
-<div><h3>A gallery with a Safe pill</h3><p>Every photo on the phone, with a small Safe pill on the ones that hold nothing beyond what your settings allow. The pill is earned: Plainshot opens the file and reads it.</p></div>
-<div><h3>Make safe</h3><p>Select any photos on the phone and tap the shield. A clean copy goes into the Plainshot album and the original is left alone, unless you choose to replace it.</p></div>
-<div><h3>Share safe</h3><p>In your phone's share menu from any app. Pick Share safe and a cleaned copy is what gets sent.</p></div>
-<div><h3>What is in this file</h3><p>Open any photo and see, in plain words, what it carries: the place, the time, the phone.</p></div>
-<div><h3>Always on</h3><p>A switch that cleans every photo the phone takes, however the camera was opened.</p></div>
-<div><h3>Names that say nothing</h3><p>Samsung names photos by date and time. Plainshot's are Plainshot_0001, Plainshot_0002.</p></div>
-<div><h3>Photos and videos</h3><p>JPEG, HEIC, PNG and WebP photos, and MP4 and MOV videos.</p></div>
-<div><h3>One tap from anywhere</h3><p>A quick-settings tile and a home-screen shortcut. Plus a 30-day bin for anything you delete.</p></div>
-</div></section>
-<section><h2>No internet access</h2>
-<p>Plainshot does not ask Android for the internet permission. It cannot send or fetch anything, and you can check that yourself: Settings, Apps, Plainshot, Permissions. The only cost is that the app cannot tell you about updates, so look at the <a href="releases.html">releases page</a> now and then.</p></section>
-<section><h2>What it will not do</h2>
-<ul>
-<li><strong>It does not change what the camera saw.</strong> A street sign, a face or a reflection in the picture is still in the picture.</li>
-<li><strong>It cannot beat an instant upload.</strong> The camera saves each shot with its information and Plainshot cleans it about three seconds later. If a cloud backup uploads your Camera folder the instant a photo is saved, it could take the original first.</li>
-<li><strong>RAW files are left alone.</strong> They stay where the camera put them and never get the Safe pill.</li>
-<li><strong>HEIC photos keep their rotation and colour.</strong> In a HEIC file those are part of how the picture is built.</li>
-</ul></section>
-<section id="installing"><h2>Installing</h2>
-<ol>
-<li>Tap Download and open the file. Android will ask you to allow installs from your browser or file app.</li>
-<li>Play Protect may ask about an app it has not seen. Plainshot asks for access to all files because cleaning photos in the Camera folder needs it.</li>
-<li>Open Plainshot and switch on the three things it asks for: All files access, Usage access and Notifications.</li>
-<li>Usage access is locked at first, because the app came from a download and not the Play Store. Try to switch Plainshot on once, so your phone shows "Restricted setting". Then open Settings, Apps, Plainshot, tap the three dots at the top right and choose Allow restricted settings. The app shows these steps too.</li>
-</ol></section>
+<p class="lede">Every photo your phone takes carries hidden information: where you were, the date and time, which phone you have. Plainshot takes it out a few seconds after you press the shutter.</p><p class="lede">Tap Shoot, use the phone's own camera with every mode it has, and what lands in your album is the picture and nothing else. Plainshot cannot go online, so nothing is sent anywhere.</p>
 
+<p class="get" id="download"><a class="button" href="https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p>
+<ul class="pills"><li>Version 1.0</li><li>Android 13 or later</li><li>2.7 MB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/gallery.png" alt="Every photo on the phone, with a Safe pill on the clean ones." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No subscription</b><span>Every feature is in the free app.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet access</b><span>It cannot send or fetch anything.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>The picture untouched</b><span>Only the hidden details go.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code with made-up photos. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from Plainshot"><figure class="shot"><div class="phone"><img src="./assets/screens/gallery.png" alt="Every photo on the phone, with a Safe pill on the clean ones." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Every photo on the phone, with a Safe pill on the clean ones.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/camera.png" alt="Camera photos that still carry where, when and which phone." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Camera photos that still carry where, when and which phone.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/viewer.png" alt="One tap to Make safe or Share safe." width="393" height="852" loading="eager" decoding="async"></div><figcaption>One tap to Make safe or Share safe.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/settings.png" alt="Everything is taken out, unless you switch it on here." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Everything is taken out, unless you switch it on here.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/more.png" alt="Videos, file dates and the Plainshot album." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Videos, file dates and the Plainshot album.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/setup.png" alt="Setting up: the three switches Plainshot needs, and why." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Setting up: the three switches Plainshot needs, and why.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/about.png" alt="No internet access, and what Plainshot cannot do." width="393" height="852" loading="eager" decoding="async"></div><figcaption>No internet access, and what Plainshot cannot do.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">There is nothing to buy and no account to make. Plainshot cleans the photos on your phone itself.</p>
+<ol class="steps"><li><h3>Tap Shoot</h3><p>The phone's own camera opens, with every mode it has.</p></li><li><h3>Take your photos</h3><p>Each one is cleaned about three seconds after you take it.</p></li><li><h3>Find them clean</h3><p>They wait in the Plainshot album, with a Safe pill, and the original is gone.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Cleaning</h3><dl><div><dt>Cleans as you shoot</dt><dd>Each photo is cleaned a few seconds after you take it and moved to its own album. The original is deleted, so the only copy is the clean one.</dd></div><div><dt>Everything off unless you say</dt><dd>Location, date and time, phone model, camera settings, thumbnail, Samsung's extras and the motion clip all go. Each has its own switch.</dd></div><div><dt>The picture is never re-made</dt><dd>The information is taken out and the picture is copied across byte for byte. No quality is lost.</dd></div><div><dt>Always on</dt><dd>A switch that cleans every photo the phone takes, however the camera was opened.</dd></div></dl></div><div class="group"><h3>Checking</h3><dl><div><dt>A gallery with a Safe pill</dt><dd>Every photo on the phone, with a Safe pill on the ones that hold nothing beyond what your settings allow.</dd></div><div><dt>What is in this file</dt><dd>Open any photo and see, in plain words, what it carries: the place, the time, the phone.</dd></div><div><dt>Names that say nothing</dt><dd>Plainshot_0001, Plainshot_0002, instead of the date and time.</dd></div></dl></div><div class="group"><h3>Sharing</h3><dl><div><dt>Make safe</dt><dd>Select any photos on the phone and tap the shield. A clean copy goes into the Plainshot album.</dd></div><div><dt>Share safe</dt><dd>In your phone's share menu from any app. A cleaned copy is what gets sent.</dd></div><div><dt>Photos and videos</dt><dd>JPEG, HEIC, PNG and WebP photos, and MP4 and MOV videos.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">Nothing leaves your phone</h2>
+<ul class="plain"><li><h3>No internet access</h3><p>Plainshot does not ask Android for the internet permission. You can check: Settings, Apps, Plainshot, Permissions.</p></li><li><h3>No servers</h3><p>There are no accounts and no servers. The developer receives nothing.</p></li><li><h3>No ads, no tracking</h3><p>There is no advertising, analytics or tracking, in the app or on this site.</p></li></ul>
+</div>
+</section>
+
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">Plainshot is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called Plainshot.apk and is about 2.7 MB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>Plainshot tells you when a newer version is out. Install the new file over the old one and everything you have saved is kept.</p></li></ol>
+<p class="after-table">Version 1.0, released 18 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is Plainshot really free?</summary><p>Yes. There is no paid version, no subscription and no adverts. <a href="compare.html">See the comparison</a>.</p></details><details><summary>Does it change how my photos look?</summary><p>No. It uses the phone's own camera, and the picture is copied across byte for byte. Only the hidden information is taken out.</p></details><details><summary>What does it take out?</summary><p>Location, date and time, phone model, camera settings, the small preview, Samsung's extras and the motion clip. Each can be kept with its own switch.</p></details><details><summary>Does it hide what is in the picture?</summary><p>No. A street sign, a face or a reflection in the picture is still in the picture.</p></details><details><summary>Can a cloud backup get the original first?</summary><p>It can. The camera saves each shot with its information and Plainshot cleans it about three seconds later. A backup that uploads the instant a photo is saved could take the original.</p></details><details><summary>What about RAW files?</summary><p>They are left where the camera put them and never get the Safe pill. HEIC photos keep their rotation and colour, because in a HEIC file those are part of the picture.</p></details><details><summary>Why does it ask for all files access and usage access?</summary><p>All files access lets it clean photos in the Camera folder. Usage access lets it see when the camera closes. Android locks usage access for downloaded apps; the app shows how to allow it.</p></details><details><summary>How do I update Plainshot?</summary><p>Plainshot has no internet access, so it cannot tell you about new versions. Look at the release notes now and then, and install a new version over the old one.</p></details></div>
+</div>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Share the picture, not where you were</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="https://github.com/CustomGPTer/plainshot/releases/latest/download/Plainshot.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
+</section>
 </main>
-<footer><p>Plainshot is free. No adverts, no accounts, no paid version.</p><p>Made by Jonathan Jackson · <a href="https://github.com/CustomGPTer/plainshot/issues">Report a problem</a></p></footer>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="Plainshot home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#15171c"/><path d="M32 9l19 7v15c0 12-8 20.5-19 24-11-3.5-19-12-19-24V16z" fill="#5edfb0"/><circle cx="32" cy="31" r="9.5" fill="#15171c"/><circle cx="32" cy="31" r="5.5" fill="#5edfb0"/><circle cx="34.2" cy="28.8" r="1.6" fill="#15171c"/></svg><span>Plainshot</span></a>
+<p>&copy; 2026 Jonathan Jackson. Plainshot is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/plainshot/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
 </body>
 </html>
